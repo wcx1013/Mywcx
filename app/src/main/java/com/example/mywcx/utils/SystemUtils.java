@@ -9,7 +9,9 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.util.DisplayMetrics;
 
-import com.example.kuangjia.apps.MyApp;
+import com.example.mywcx.apps.MyApp;
+
+import androidx.annotation.RequiresApi;
 
 
 public class SystemUtils {
@@ -72,6 +74,7 @@ public class SystemUtils {
      * @param context
      * @return
      */
+    @RequiresApi(api = Build.VERSION_CODES.P)
     public static Long getVersionCode(Context context, String pg){
         PackageInfo pgInfo = null;
         try {
