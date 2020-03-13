@@ -36,6 +36,7 @@ public abstract class BaseFragment<P extends IBasePersenter> extends Fragment im
          context = getContext();
          activity = getActivity();
          unbinder = ButterKnife.bind(this, view);
+        persenter = createPersenter();
          if(persenter!=null)persenter.attachView(this);
          initView();
          initData();
